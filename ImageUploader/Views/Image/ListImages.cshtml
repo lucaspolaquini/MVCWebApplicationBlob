@@ -1,0 +1,12 @@
+﻿@model List<ImageUploader.Models.UploadedImage>
+@{
+    ViewBag.Title = "ListImages";
+    Layout = "~/Views/Shared/_LayoutPadrao.cshtml";
+}
+
+<h2>Lista de Imagens</h2>
+
+@foreach (var img in Model)
+{
+<img src="@img.Url" alt="Imagem" width="300" style="margin-bottom: 20px" />
+}
